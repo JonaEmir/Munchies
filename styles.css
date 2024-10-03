@@ -1,0 +1,344 @@
+body {
+    background-color: #F6DEC6;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Meta etiqueta de vista (asegúrate de incluir esto en tu HTML) */
+@media (max-width: 991px) {
+    body {
+        padding: 0 10px; /* Agregar un poco de padding a los lados */
+    }
+}
+
+.navbar {
+    background-color: #F6DEC6;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.15);
+    height: 100vh;
+    width: 320px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    z-index: 1000;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        height: auto;
+        width: 100%; /* Usa el ancho completo */
+        position: relative; /* Cambia a posición relativa */
+        flex-direction: row; /* Cambiar a fila */
+        justify-content: center; /* Centrar el contenido */
+        box-shadow: none;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
+
+.navbar-brand {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+    .navbar-brand {
+        margin-bottom: -450px;
+    }
+}
+
+.navbar-brand img {
+    height: 80px;
+    width: auto;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-nav {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.main-content,
+.header-image,
+.footer,
+.container {
+    margin-left: 350px; /* Para pantallas grandes */
+    padding: 50px;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .main-content,
+    .header-image,
+    .footer,
+    .container {
+        margin-left: 0; /* Sin margen izquierdo */
+        padding: 20px; /* Padding reducido */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Asegura que el contenido tome el 100% del ancho disponible */
+    }
+}
+
+.header-image {
+    background-image: url('Logo/banner111111.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #BD1D1D;
+    margin-left: 30px;
+}
+
+@media (max-width: 991px) {
+    .header-image {
+        margin-left: 0; /* Sin margen izquierdo */
+        width: 100%; /* Asegura que la imagen se ajuste al ancho completo */
+        height: 70vh; /* Reduce la altura en pantallas pequeñas */
+    }
+}
+
+.header-image h1 {
+    margin-bottom: 20px;
+    font-size: 4rem; /* Ajustar tamaño de fuente */
+    color: #BD1D1D;
+    width: 100%;
+}
+
+.header-image .btn {
+    font-size: 1.2rem; /* Ajustar tamaño de fuente */
+    margin-top: 20px;
+    background-color: transparent;
+    color: #BD1D1D;
+    border: 2px solid #BD1D1D;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.header-image .btn:hover {
+    background-color: #BD1D1D;
+    color: #fff;
+}
+
+/* Tarjetas y footer */
+.card,
+.footer,
+.card-body {
+    background-color: #F6DEC6;
+    border: none;
+}
+
+.footer {
+    background-color: #F6DEC6;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Galería */
+.Galeria {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.Galeria img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.row {
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .row > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .row > div {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .row > div {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+
+.carousel {
+    width: 100%; /* Asegura que el carrusel use el ancho completo */
+    max-width: 800px; /* Mantén un máximo para no ser demasiado grande en pantallas grandes */
+    margin: 0 auto; /* Centra el carrusel */
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Botones personalizados */
+.custom-btn {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    background-color: transparent;
+    color: #BD1D1D;
+    border: 2px solid #BD1D1D;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn:hover {
+    background-color: #BD1D1D;
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Footer contenido */
+.footer-content h2 {
+    color: #BD1D1D;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(100%);
+}
+
+.footer-links a {
+    color: #BD1D1D;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-content p:last-child {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+h1 {
+    text-align: center;
+    color: #D32F2F;
+    font-size: 2rem; /* Ajustar tamaño de fuente */
+}
+
+h2 {
+    color: #444;
+    border-bottom: 2px solid #D32F2F;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+p {
+    color: #666;
+    font-size: 0.9rem; /* Ajustar tamaño de fuente */
+    line-height: 1.6;
+}
+
+/* Menú */
+.menu-category {
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.menu-item-price {
+    font-size: 1rem; /* Ajustar tamaño de fuente */
+    font-weight: bold;
+    color: #D32F2F;
+}
+
+.description {
+    font-size: 0.8rem; /* Ajustar tamaño de fuente */
+    color: #888;
+    text-align: left;
+}
+
+/* Botones de formularios */
+.btn-custom {
+    background-color: #BD1D1D;
+    background-image: linear-gradient(45deg, #BD1D1D, #00c6ff);
+    color: white;
+    border-radius: 50px;
+    padding: 12px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+}
